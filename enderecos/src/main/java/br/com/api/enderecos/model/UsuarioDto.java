@@ -11,7 +11,7 @@ public class UsuarioDto {
 	private String nome;
 	private String email;
 	private Long cpf;
-	private LocalDate dtNascimento;
+	private String dtNascimento;
 	private List<EnderecoDto> enderecos = new ArrayList<>();
 	
 	public String getNome() {
@@ -32,10 +32,10 @@ public class UsuarioDto {
 	public void setCpf(Long cpf) {
 		this.cpf = cpf;
 	}
-	public LocalDate getDtNascimento() {
+	public String getDtNascimento() {
 		return dtNascimento;
 	}
-	public void setDtNascimento(LocalDate dtNascimento) {
+	public void setDtNascimento(String dtNascimento) {
 		this.dtNascimento = dtNascimento;
 	}
 	public List<EnderecoDto> getEnderecos() {

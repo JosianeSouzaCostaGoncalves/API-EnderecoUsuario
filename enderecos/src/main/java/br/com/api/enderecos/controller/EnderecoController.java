@@ -6,19 +6,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.api.enderecos.model.UsuarioDto;
-import br.com.api.enderecos.service.UsuarioService;
-
+import br.com.api.enderecos.model.EnderecoDto;
+import br.com.api.enderecos.service.EnderecoService;
 
 @RestController
-public class UsuarioController {
-	
+public class EnderecoController {
+
 	@Autowired
-	private UsuarioService usuarioService;
-	
-	@PostMapping("/usuario")
-	public HttpStatus cadastroUsuario (@RequestBody UsuarioDto usuario){
-		usuarioService.cadastroUsuario(usuario);
+	private EnderecoService enderecoService;
+
+	@PostMapping("/endereco")
+	public HttpStatus cadastroEndereco(@RequestBody EnderecoDto endereco) {
+		enderecoService.cadastroEndereco(endereco);
 		return HttpStatus.CREATED;
 	}
 
