@@ -8,3 +8,8 @@ public interface UsuarioRepository extends JpaRepository<UsuarioEntity, Long>{
 
 	
 }
+
+
+
+
+

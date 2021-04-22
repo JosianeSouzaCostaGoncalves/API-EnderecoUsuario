@@ -20,7 +20,7 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 
 	@PostMapping("/usuario")
-	public HttpStatus cadastroUsuario(@Valid @RequestBody UsuarioDto usuario) {
+	public HttpStatus cadastroUsuario(@RequestBody @Valid UsuarioDto usuario) {
 
 		usuarioService.cadastroUsuario(usuario);
 		return HttpStatus.CREATED;

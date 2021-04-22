@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.lang.NonNull;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -13,8 +13,9 @@ public class UsuarioDto {
 	
 	private String nome;
 	@JsonProperty (required = true)
+	@NotNull 
 	private String email;
-	@NonNull 
+	@NotNull 
 	private Long cpf;
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 	private LocalDate dtNascimento;
