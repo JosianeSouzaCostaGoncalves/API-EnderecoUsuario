@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.api.enderecos.mapper.EnderecoMapper;
-import br.com.api.enderecos.mapper.UsuarioMapper;
 import br.com.api.enderecos.model.EnderecoDto;
 import br.com.api.enderecos.repositories.EnderecoRepository;
 
