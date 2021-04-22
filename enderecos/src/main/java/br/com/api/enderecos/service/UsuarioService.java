@@ -1,4 +1,4 @@
-package br.com.api.enderecos.service;
+ package br.com.api.enderecos.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +14,10 @@ public class UsuarioService {
 	private UsuarioRepository usuarioRepository;
 
 	public void cadastroUsuario(UsuarioDto usuario) {
-		usuarioRepository.save(UsuarioMapper.INSTANCE.converteParaUsuarioEntity(usuario));
+		usuarioRepository.save(UsuarioMapper.converteParaUsuarioEntity(usuario));		
 	}
+	public UsuarioDto getUsuario(Long id) {
+		return UsuarioMapper.converteParaUsuarioDto(usuarioRepository.getOne(id));
+	}
+		
 }

@@ -4,14 +4,20 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.api.enderecos.entities.EnderecoEntity;
+import org.springframework.lang.NonNull;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UsuarioDto {
 	
 	private String nome;
+	@JsonProperty (required = true)
 	private String email;
+	@NonNull 
 	private Long cpf;
-	private String dtNascimento;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
+	private LocalDate dtNascimento;
 	private List<EnderecoDto> enderecos = new ArrayList<>();
 	
 	public String getNome() {
@@ -32,10 +38,10 @@ public class UsuarioDto {
 	public void setCpf(Long cpf) {
 		this.cpf = cpf;
 	}
-	public String getDtNascimento() {
+	public LocalDate getDtNascimento() {
 		return dtNascimento;
 	}
-	public void setDtNascimento(String dtNascimento) {
+	public void setDtNascimento(LocalDate dtNascimento) {
 		this.dtNascimento = dtNascimento;
 	}
 	public List<EnderecoDto> getEnderecos() {

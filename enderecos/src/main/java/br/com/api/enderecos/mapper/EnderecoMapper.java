@@ -9,6 +9,6 @@ public interface EnderecoMapper {
 	
 	EnderecoMapper INSTANCE = Mappers.getMapper(EnderecoMapper.class);
 
-	EnderecoEntity converteParaEnderecoDto (EnderecoDto enderecoDto);
-	EnderecoDto converteParaEnderecoEntity (EnderecoDto endereco);
+	EnderecoEntity converteParaEnderecoDto (EnderecoEntity enderecoDto);
+	EnderecoEntity converteParaEnderecoEntity (EnderecoDto endereco);
 }

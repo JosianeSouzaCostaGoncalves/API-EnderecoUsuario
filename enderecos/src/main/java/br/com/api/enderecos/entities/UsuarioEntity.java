@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class UsuarioEntity {
@@ -17,7 +18,9 @@ public class UsuarioEntity {
 	
 	private Long id;
 	private String nome;
+	@NotNull (message = "teste")
 	private String email;
+	@NotNull (message = "teste")
 	private Long cpf;
 	private LocalDate dtNascimento;
 	@OneToMany(mappedBy = "usuario")
